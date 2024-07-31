@@ -1,38 +1,240 @@
 .App {
   text-align: center;
 }
+.nav{
+  position: fixed;
+  background-color: #018749;
+  width:100%;
+  height: 40px;
+  font-size: 2em;
+ 
+}
 
 .App-logo {
+  justify-content: left;
   height: 40vmin;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.a{
+  margin-left:20px;
+  margin-right: 20px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #018749;
+  min-height: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.AppBody{
+  background-color: #ffffff;
+  width: 100%;
+  height: 300px;
+  color: #018749;
 }
 
 .App-link {
   color: #61dafb;
+ 
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.body{
+  margin-left:5%;
+  margin-right: 5%;
+  position: relative;
+  }
+
+.tasklist{
+  overflow:scroll;
+}
+.items-grid{
+  width: 100%;
+
+}
+
+/* NAVBAR */
+
+.custom-navbar{
+  border-bottom: 2px solid #018749;
+}
+
+.custom-navbar {
+  color: #018749 !important; 
+  font-size: 1.5rem; 
+  font-weight: bold; 
+}
+.navbar-brand {
+  color: #ffffff !important; 
+  flex:left;
+   
+}
+.custom-navbar .nav-link {
+  color: #018749 !important; 
+  padding: 12px;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #018749 !important; 
+}
+
+
+.custom-navbar .navbar-toggler {
+  background-color: #018749; 
+  border: none; 
+}
+
+.custom-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+.custom-navbar .navbar-toggler.collapsed {
+  background-color: #018749; 
+}
+
+/* END NAVBAR */
+
+.head-image {
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://media.istockphoto.com/id/1409298953/photo/real-estate-agents-shake-hands-after-the-signing-of-the-contract-agreement-is-complete.jpg?s=612x612&w=0&k=20&c=SFybbpGMB0wIoI0tJotFqptzAYK_mICVITNdQIXqnyc=');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; 
+  z-index: -1; /* Ensure the pseudo-element is below the content */
+}
+
+.head-image .container {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the pseudo-element */
+}
+
+.search-filter {
+  max-width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-div {
+
+  margin-bottom: 10px;
+}
+
+
+.btn-custom {
+  background-color: #018749 !important;
+  color: white !important;;
+  border: none !important;;
+}
+
+.btn-custom:hover {
+  background-color: #ffffff !important;;
+  color: white !important;;
+}
+
+.featureTitle {
+
+  font-size: 4em;
+  color: #ffffff;
+  
+}
+
+.featureText {
+
+  color: black;
+  font-size: 2em;
+}
+
+.form-label {
+  margin-top: 0.5rem !important;
+}
+
+.pagetitle {
+
+  font-size: 2em;
+  color: #018749;
+  margin-bottom: 0%;
+  
+}
+.pagetitle h2{
+  margin: collapse;
+  border: collapse;
+  font-size: 0.5em;
+}
+/* Footer */
+.custom-footer {
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
+.bg-darker-purple {
+  background-color: #03562f;
+}
+
+.text-purple {
+  color: #018749;
+}
+
+.border-top-purple {
+  border-top: 3px solid #018749;
+}
+
+.custom-footer .text-purple {
+  color: #018749;
+}
+
+.custom-footer .text-purple:hover {
+  color: #6ce1aa;
+}
+
+.custom-footer .text-light {
+  color: #c6efdc;
+}
+
+.custom-footer .text-light:hover {
+  color: #fff;
+}
+
+/* Social */
+.social-icons i {
+  margin: 0 10px;
+}
+
+.social-icons i:hover {
+  color: #6a006a;
+}
+
+.propertyCard {
+  min-width: 300px;
 }
