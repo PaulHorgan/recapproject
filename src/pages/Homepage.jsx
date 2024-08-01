@@ -1,10 +1,12 @@
 import '../App.css';
 import logo from '../logo.jpg';
-import Tasks from './Tasks';
-import Employee from './Employee';
+
+
 
 
 function Homepage () {
+  
+
 return (
   <div className="body"> 
   <header className="App-header">
