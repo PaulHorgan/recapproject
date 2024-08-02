@@ -3,47 +3,42 @@ import { useState } from "react";
 
 
 const AddTask = () => {
-    const [taskDetails, setTaskDetails] = useState('');
+    const [taskDetail, setTaskDetail] = useState('');
     const [progress, setProgress] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const user = { firstName, surname };
+        const task = { taskDetail, progress};
         fetch('http://localhost:8081/tasks/add', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(user)
+            body: JSON.stringify(task)
         });
-        setFirstName("");
-        setSurname("");
+        setTaskDetail("");
+        setProgress("");
     }
 
 
     return (
         <div>
+           
             <form onSubmit={handleSubmit}>
                 <br></br>
                 <br></br>
 
-                <label className="label1">First Name: </label>
+                <label className="label1">New Task Details </label>
                 <input
                     className="input1"
                     type="text"
                     required
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
+                    value={taskDetail}
+                    onChange={(e) => setTaskDetail(e.target.value)}
                 />
                 <br></br>
                 <br></br>
 
-                <label className="label1">Surname: </label>
-                <input
-                    className="input1"
-                    type="text"
-                    required
-                    value={surname}
-                    onChange={(e) => setSurname(e.target.value)}
-                />
+                <label className="label1">This will be flagged as unplanned. Visit the tasks page to assign this task and update </label>
+        
                 <br></br>
                 <br></br>
                 <button className="button1"> Add Task</button>

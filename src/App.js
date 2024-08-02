@@ -8,6 +8,7 @@ import NavBar from './components/Navbar';
 import Homepage from './pages/Homepage';
 import TaskUpdate from './pages/TaskUpdate';
 import axios from 'axios';
+import EmployeeUpdate from './pages/EmployeeUpdate';
 
 function App() {
  
@@ -24,11 +25,13 @@ function App() {
       /> 
 
         <BrowserRouter>
+        <nav>
           <NavBar />
           <Routes>
             <Route path='/' element={<Homepage/>} />
             <Route path='/Tasks' element={<Tasks />} />
             <Route path='/Employee' element={<Employee />} />
+            <Route path='Employee/update/:id' element={<EmployeeUpdate />} />
             <Route path='Tasks/update/:id' element={<TaskUpdate />} />
           </Routes>
 
@@ -42,6 +45,8 @@ function App() {
                     <b>Address:</b> Imaginary House, SquareRoot of Negative7, Fictional Place, AR51 0US<br />
                     <b>Phone:</b> 0123 555 1253<br />
                     <b>Email:</b> noreply@dontmailmeillmailyou.co.uk<br />
+                    <br />
+                 
                     <div className="social-icons">
                       <Link to="/" className="text-purple me-3">
                         <i className="fab fa-facebook fa-2x"></i>
@@ -57,23 +62,14 @@ function App() {
                     </div>
                   </p>
                 </div>
-                <div className="col-lg-6 col-md-6 mb-4 mb-md-0">
-                  <h5 className="text-uppercase text-purple text-center">Links</h5>
-                  <ul className="list-unstyled mb-0 text-center">
-                    <li>
-                      <Link to="/Tasks" className="text-purple">Tasks</Link>
-                    </li>
-                    <li>
-                      <Link to="/Employee" className="text-purple">Employees</Link>
-                                        </li>
-                  </ul>
-                </div>
+                
               </div>
             </div>
             <div className="text-center p-3 bg-darker-purple text-white">
               © 2024 Copyright: <Link className="text-white" to="/">WrongMove</Link>
             </div>
           </footer>
+          </nav>
           </BrowserRouter>
 
 

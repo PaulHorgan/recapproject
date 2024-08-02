@@ -2,17 +2,18 @@ import '../App.css';
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router';
 
 
-
-function TaskList() {
+function EmployeeTaskList() {
+    const params = useParams();
     const navigate = useNavigate();
     const [tasks, setTasks] = useState([]);
     const fetchData = async () => {
         try {
-            const response = await fetch('http://localhost:8081/tasks/getAll');
+            const response = await fetch(`http://localhost:8081/employee/get/${params.id}`);
             const data = await response.json();
-            setTasks(data);
+            setTasks(data.tasks);
             console.log(tasks)
         } catch (error) {
             console.error('Error:', error);
@@ -52,4 +53,4 @@ function TaskList() {
         </div>
     )
 }
-export default TaskList;
+export default EmployeeTaskList;

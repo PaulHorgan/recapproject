@@ -1,5 +1,6 @@
 import TaskList from "../components/TaskList";
 import '../App.css';
+import AddTask from "../components/AddTask";
 
 
 function Tasks() {
@@ -7,8 +8,11 @@ function Tasks() {
         <div className="body">
             <div className="pagetitle">
                 <h1 >TASK MANAGEMENT</h1>
-                <h2 > Add and Amend below</h2>
+                <h2>Please add new Tasks here, or manage tasks below </h2>
+                
             </div>
+            <AddTask />
+            
             <TaskList />
 
         </div>

@@ -9,6 +9,7 @@ function Employee() {
 
     return (
         <div className="body">
+          
             <h1 className="pagetitle">Employee Lists and New Employees</h1>
             <AddEmployee />
             <EmployeeTable />

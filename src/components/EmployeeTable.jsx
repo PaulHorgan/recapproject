@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 
 function EmployeeTable() {
     const [employees, setEmployees] = useState([]);
-
+    const navigate = useNavigate();
        const fetchData = async () => {
         try{
             const response = await fetch('http://localhost:8081/employee/getAll');
@@ -32,9 +33,9 @@ function EmployeeTable() {
                 <tbody>
                     {employees.map((employee)=> (
                     <tr key={employee.id}>
-                        <td> {employee.id}</td>
-                        <td> {employee.firstName}</td>
-                        <td> {employee.surname}</td>
+                        <td onClick={()=>navigate('../Employee/update/' +employee.id)} > {employee.id}</td>
+                        <td onClick={()=>navigate('../Employee/update/' +employee.id)}> {employee.firstName}</td>
+                        <td onClick={()=>navigate('../Employee/update/' +employee.id)}> {employee.surname}</td>
                     </tr>
                ))}
 
